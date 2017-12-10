@@ -1,0 +1,132 @@
+{% extends 'layouts/base.html' %}
+{% load compress %}
+{% load staticfiles %}
+
+{% block assets %}
+  {% compress css %}
+    <link rel="stylesheet" href="/static/custom/apps/core/less/home.less" type="text/less" charset="utf-8">
+  {% endcompress %}
+{% endblock %}
+
+{% block content %}
+<div class="masthead segment">
+  <div class="ui center aligned container grid">
+    <div class="row">
+      <span class="organization">
+        The Consulting Group <br> at Virginia Tech
+      </span>
+    </div>
+    <div class="row">
+      <i class="inverted line chart icon"></i>
+    </div>
+    <div class="row">
+      <span class="tagline">
+        Let's build business
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="ui leading large-font vertical stripe segment">
+  <div class="ui middle aligned stackable grid container">
+    <div class="row">
+      <div class="eight wide column">
+        <h2 class="ui header">
+          Bridging the Gap
+        </h2>
+        <p>
+          We connect the divide between Virginia Tech students and business consulting firms, bridging the gap between top talent and top companies.
+        </p>
+        <h2 class="ui header">
+          Raising the Bar
+        </h2>
+        <p>
+          We don't just learn the tools of the trade; we apply what we learn to develop cutting-edge strategies for companies both big and small.
+        </p>
+      </div>
+      <div class="six wide right floated column">
+      <img class="ui centered medium rounded logo image" src="/static/img/logo.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui feature medium-font stripe vertical segment">
+  <div class="ui three column center aligned divided relaxed stackable grid container">
+    <div class="row">
+      <div class="column">
+        <img class="ui centered medium bordered rounded image" src="/static/img/home/top-talent.png">
+        <h3 class="ui header">
+          Top Talent
+          <i class="pencil icon"></i>
+        </h3>
+        <p>We provide consulting services for real businesses in the Blacksburg area and beyond on a Pro Bono basis. This gives our members a unique learning experience while also helping to support businesses of all sizes.</p>
+      </div>
+      <div class="column">
+        <img class="ui centered medium bordered rounded image" src="/static/img/home/prof-dev.png">
+        <h3 class="ui header">
+          Professional Growth
+          <i class="book icon"></i>
+        </h3>
+        <p>Embodying the university's motto of <em>Ut Prosim</em> through Pro Bono consulting, we prepare our members for critical roles at top consulting, business, and tech companies after graduation.</p>
+      </div>
+      <div class="column">
+        <img class="ui centered medium bordered rounded image" src="/static/img/home/network.png">
+        <h3 class="ui header">
+          A Valuable Network
+          <i class="share alternate icon"></i>
+        </h3>
+        <p>We provide a great opportunity for our members to network with industry professionals, our clients, and fellow members. These interactions are priceless in preparing for a potential consulting career.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui feature medium-font stripe vertical segment">
+  <div class="ui relaxed stackable grid container">
+    <div class="row">
+      <div class="column">
+        <h1 class="ui header">
+          What do we do?
+          <div class="sub header">
+            <p>&nbsp;We provide a variety of services to help our clients innovate and succeed.</p>
+          </div>
+        </h1>
+      </div>
+    </div>
+    <div class="four column row">
+      <div class="column">
+        <h2 class="ui center aligned icon header">
+          <i class="circular idea icon"></i>
+          Business<br>Innovation
+        </h2>
+      </div>
+      <div class="column">
+        <h2 class="ui center aligned icon header">
+          <i class="circular signal icon"></i>
+          Marketing<br>Implementation
+        </h2>
+      </div>
+      <div class="column">
+        <h2 class="ui center aligned icon header">
+          <i class="circular terminal icon"></i>
+          IT<br>Consulting
+        </h2>
+      </div>
+      <div class="column">
+        <h2 class="ui center aligned icon header">
+          <i class="circular world icon"></i>
+          Financial<br>Strategy
+        </h2>
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="column">
+        <div class="ui center aligned container grid">
+          <a class="ui big basic button" href="/about">Learn more about us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+#!/bin/bash
+export PATH=/app/.heroku/node/bin:$PATH
+
+which lessc || npm install -g less
+
+python cgvt_site/manage.py migrate
+python cgvt_site/manage.py compress --force
+python cgvt_site/manage.py collectstatic --noinput

@@ -1,0 +1,144 @@
+{% extends 'layouts/base.html' %}
+{% load compress %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="ui stripe center aligned vertical title segment">
+  About
+</div>
+<!-- color code that matches logo is #78274A -->
+<div class="ui stripe large-font vertical segment">
+  <div class="ui equal width stackable internally celled grid">
+    <div class="center aligned row">
+      <div class="column">
+        <h1 class="ui header">Vision</h1>
+        <p>
+          The Consulting Group at Virginia Tech was founded in 2010 to make Virginia Tech a world leader in molding consulting and business talent.
+        </p>
+      </div>
+      <div class="column">
+        <h1 class="ui header">Mission</h1>
+        <p>
+          The mission of Consulting Group at Virginia Tech is to embody <em>Ut Prosim</em>, "that I may serve," through Pro Bono consulting and, in doing so, prepare members to land and excel at top companies upon graduation.
+        </p>
+      </div>
+      <div class="column">
+        <h1 class="ui header">Core Values</h1>
+        <div class="ui list">
+          <div class="item">Leadership</div>
+          <div class="item">Excellence</div>
+          <div class="item">Collaboration</div>
+          <div class="item">Professional Development</div>
+          <div class="item">Client Service</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui stripe medium-font vertical feature segment">
+  <div class="ui middle aligned container">
+    <h1 class="ui header">Bridging the Gap</h1>
+
+    <p>
+      <b>The Consulting Group at Virginia Tech is an organization filled with talented and passionate students who have a career interest in business consulting.</b>
+    </p>
+
+    <img class="ui small bordered rounded left floated image" src="/static/img/about/members.png">
+    <p>
+      The Consulting Group is bridging the gap between Virginia Tech students and business consulting firms from around the world. As an industry-oriented organization, we encourage students to learn more about the exciting and fast-changing consulting world. Our analysts work with businesses around the area in developing business and strategic solutions while advancing their knowledge and honing their skills on real consulting issues.
+    </p>
+
+    <img class="ui small bordered rounded right floated image" src="/static/img/about/presentation.png">
+    <p>
+      We are constantly expanding our knowledge by receiving cutting-edge instruction from top consulting firms. In preparation for projects, analysts participate in workshops and other developmental events that will allow them to succeed in their future consulting careers. Additionally, we organize networking opportunities between students and employers and host internal case competitions, promoting information exchange and experience-sharing among students.
+    </p>
+
+    <img class="ui small bordered rounded left floated image" src="/static/img/about/classroom.png">
+    <p>
+      We offer first-hand consulting experience with our clients. In addition, CGVT provides continuous preparation and training through peer mentoring, case studies, case competitions, and mock interviews. Consequently, our analysts gain valuable insights in consulting, helping them to excel in their future careers.
+    </p>
+  </div>
+</div>
+
+<div class="ui stripe medium-font vertical feature segment">
+  <div class="ui container grid">
+
+    <div class="centered row">
+      <h1 class="ui header">Our Leadership Team</h1>
+    </div>
+
+    <div class="row">
+      <div class="ui equal width stackable grid">
+        <div class="center aligned row">
+
+          <div class="column">
+            {% include 'components/member_spotlight.html' with name='Kia Eskandarian' title='President' email='kiae95@vt.edu' pic_name='team-kia.png' only %}
+          </div>
+
+          <div class="column">
+            {% include 'components/member_spotlight.html' with name='Srikar Manjuluri' title='Director of Organizational Development' email='srikar11@vt.edu' pic_name='team-srikar.png' only %}
+          </div>
+
+          <div class="column">
+            {% include 'components/member_spotlight.html' with name='Timothy Kim' title='Director of Projects' email='timk1m@vt.edu' pic_name='team-tim.png' only %}
+          </div>
+
+          <div class="column">
+            {% include 'components/member_spotlight.html' with name='Eli Sulfridge' title='Director of Operations' email='eli14@vt.edu' pic_name='team-eli.png' only %}
+          </div>
+
+          <div class="column">
+            {% include 'components/member_spotlight.html' with name='Sayan Ekambarapu' title='Director of Information Technology' email='sayan96@vt.edu' pic_name='team-sayan.png' only %}
+          </div>
+
+          <div class="column">
+            {% include 'components/member_spotlight.html' with name='Vaishnavi Somanchi' title='Director of Public Relations' email='vaish96@vt.edu' pic_name='team-vaish.png' only %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="ui stripe medium-font vertical feature segment">
+
+  <div class="ui container grid">
+
+    <div class="centered row">
+      <h1 class="ui header">Our Corporate Partners</h1>
+    </div>
+
+    <div class="row">
+      <div class="ui internally celled stackable middle aligned grid">
+        <div class="equal width row">
+          <div class="column">
+            <img class="ui small centered image" src="/static/img/sponsors/deloitte.png">
+          </div>
+          <div class="column">
+            <img class="ui small centered image" src="/static/img/sponsors/accenture.png">
+          </div>
+          <div class="column">
+            <img class="ui small centered image" src="/static/img/sponsors/EY-logo.png">
+          </div>
+        </div>
+
+        <div class="equal width row">
+          <div class="column">
+            <img class="ui small centered image" src="/static/img/sponsors/pwc.png">
+          </div>
+          <div class="column">
+            <img class="ui small centered image" src="/static/img/sponsors/kpmg.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

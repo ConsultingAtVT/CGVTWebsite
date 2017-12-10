@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+{% load compress %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="ui stripe center aligned vertical title segment">
+  Calendar
+</div>
+
+<div class ="ui feature medium-font vertical stripe segment">
+	<div class="ui container">
+ 		<div class="ui container grid">
+ 			<div class="centered row">
+ 			<h1 class="ui header">
+ 				<div class="content">
+ 					<iframe src="https://calendar.google.com/calendar/embed?src=cgvt%40vt.edu&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+ 				</div>
+ 			</h1>
+ 			</div>
+ 		</div>
+ 	</div>
+</div>
+
+
+{% endblock %}

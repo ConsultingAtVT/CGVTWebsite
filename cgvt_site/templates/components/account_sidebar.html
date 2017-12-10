@@ -1,0 +1,40 @@
+{% if user.is_authenticated %}
+
+<div class="ui center aligned container">
+  <div class="ui horizontal divider">
+    Your profile
+    <i class="user icon"></i>
+  </div>
+
+  Hi {{ user.userprofile.li_first_name }}, we hope you are enjoying your experience on the CGVT website!
+
+  <div class="ui hidden horizontal divider"></div>
+
+  <img class="ui centered small bordered rounded image" src="{{ user.userprofile.li_picture_url }}">
+
+  <div class="ui items">
+    <div class="item">
+      
+      <div class="content">
+        <a class="header" href="{{ user.userprofile.li_profile_url }}" target="_blank">{{ user.userprofile.li_first_name }} {{ user.userprofile.li_last_name }}</a>
+        <div class="meta">
+          <span class="date">Site member since {{user.date_joined }}</span>
+        </div>
+        <div class="description">
+          <p></p>
+        </div>
+        <div class="extra content">
+          <i class="mail outline icon"></i>
+          {{ user.userprofile.li_email }} 
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <a class="ui big basic button" href="/logout">
+    Logout
+  </a>
+
+</div>
+{% endif %}

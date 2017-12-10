@@ -1,0 +1,12 @@
+{% if user.is_authenticated %}
+  <a class="account-link cgvt-brown item">
+    Account
+  </a>
+{% else %}
+  <a href="{% url 'social:begin' backend='linkedin-oauth2' %}" data-position="bottom right" class="cgvt-brown item {% if login_error_msg %}shown-popup-element{% endif %}">
+    Login
+  </a>
+  {% if login_error_msg %}
+    {% include 'components/popups/error.html' with msg=login_error_msg only %}
+  {% endif %}
+{% endif %}

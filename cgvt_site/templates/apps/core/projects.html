@@ -1,0 +1,95 @@
+{% extends 'layouts/base.html' %}
+{% load compress %}
+{% load staticfiles %}
+
+{% block assets %}
+  {% compress css %}
+    <link rel="stylesheet" href="/static/custom/apps/core/less/projects.less" type="text/less" charset="utf-8">
+  {% endcompress %}
+{% endblock %}
+
+{% block content %}
+
+<div class="ui stripe center aligned vertical title segment">
+  Projects
+</div>
+
+<div class="ui stripe large-font vertical segment">
+  <div class="ui container">
+    <p>
+      The Consulting Group at Virginia Tech has worked with some great clients and built lasting relationships along the way, doing work in a variety of business and IT operations. The Pro Bono work we've done has been mutually beneficial to our members and clients. Take a look at some of what we've done below.
+    </p>
+  </div>
+</div>
+
+<div class="ui stripe medium-font vertical feature segment">
+  <div class="ui middle aligned container">
+    <h1 class="ui huge header">Current Projects</h1>
+    <div class="ui internally celled stackable middle aligned grid">
+      <div class="equal width row">
+        <div class="column">
+            <center><img src="/static/img/clients/excella.png"></center>
+            <div class="overlay">
+              <div class="text">CGVT is assisting Excella Consulting in improving their recruitment strategies and helping them find new avenues for additional recruitment efforts.</div>
+            </div>
+        </div>
+        <div class="column">
+            <center><img src="/static/img/clients/ea-logo.png"></center>
+            <div class="overlay">
+              <div class="text">CGVT is analyzing the performance of marketing vehicles, creating a market strategy to increase sales, and performing a comprehensive Business Process Improvement study.</div>
+            </div>
+        </div>
+      </div>
+      <div class="equal width row">
+        <div class="column">
+            <center><img src="/static/img/clients/b2n.png"></center>
+            <div class="overlay">
+              <div class="text">CGVT is identifying areas where the “Back to Nature” brand can be leveraged, searching for effective marketing channels, and implementing any approved solutions CGVT proposes.</div>
+            </div>
+        </div>
+        <div class="column">
+            <center><img src="/static/img/clients/vt-sustainability.png"></center>
+            <div class="overlay">
+              <div class="text">CGVT is researching areas that can affect sustainability, and will complete a metric survey which will entail test runs and amendments.</div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="ui middle aligned container">
+    <h1 class="ui huge header">Past Projects</h1>
+    <div class="ui internally celled stackable middle aligned grid">
+      <div class="equal width row">
+        <div class="column">
+            <center><img src="/static/img/clients/vt-recsports.png"></center>
+            <!--<div class="overlay">
+              <div class="text">Hello World</div>
+            </div>-->
+        </div>
+        <div class="column">
+            <center><img src="/static/img/clients/somasasa.png"></center>
+            <!--<div class="overlay">
+              <div class="text">Hello World</div>
+            </div>-->
+        </div>
+      </div>
+      <div class="equal width row">
+        <div class="column">
+            <center><img src="/static/img/clients/ac4p.png"></center>
+            <!--<div class="overlay">
+              <div class="text">Hello World</div>
+            </div>-->
+        </div>
+        <div class="column">
+            <center><img src="/static/img/clients/big-als.png"></center>
+            <!--<div class="overlay">
+              <div class="text">Hello World</div>
+            </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

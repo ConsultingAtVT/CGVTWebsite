@@ -1,0 +1,17 @@
+{% comment %}
+
+A popup component used to render an error message.
+
+Args:
+  msg (str): The error message to render.
+
+{% endcomment %}
+<div class="ui bottom popup">
+  <h3 class="ui header">
+    <i class="red frown icon"></i>
+    <div class="content">Whoops</div>
+  </h3>
+  <p>
+    {{ msg }}
+  </p>
+</div>

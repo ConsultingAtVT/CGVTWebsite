@@ -1,0 +1,47 @@
+{% load compress %}
+{% load staticfiles %}
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>CGVT</title>
+
+    <link rel="icon" type="image/png" href="/static/img/logo-maroon.png">
+
+    <script src="/static/vendor/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/vendor/semantic.min.js" type="text/javascript" charset="utf-8"></script>
+
+    {% compress js %}
+      <script src="/static/custom/layouts/js/base.js" type="text/javascript" carset="utf-8"></script>
+    {% endcompress %}
+
+    <link rel="stylesheet" href="/static/vendor/semantic.min.css" type="text/css" charset="utf-8">
+    {% compress css %}
+      <link rel="stylesheet" href="/static/custom/layouts/less/base.less" type="text/less" charset="utf-8">
+    {% endcompress %}
+
+    {% block assets %}
+    {% endblock %}
+  </head>
+  <body class="pushable">
+    <div id="account-sidebar" class="ui sidebar">
+      {% include 'components/account_sidebar.html' %}
+    </div>
+    <div id="mobile-menu-sidebar" class="ui sidebar">
+      {% include 'components/mobile_menu.html' %}
+    </div>
+    <div class="cgvt-brown-bg pusher">
+      {% include 'components/mobile_navbar.html' %}
+      {% include 'components/following_navbar.html' %}
+
+      {% block content %}
+      {% endblock %}
+
+      {% include 'components/footer.html' %}
+    </div>
+  </body>
+</html>

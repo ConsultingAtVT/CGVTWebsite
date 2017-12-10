@@ -1,0 +1,14 @@
+__pycache__
+*.py[co]
+
+node_modules/
+semantic/
+
+static/
+
+db.sqlite3
+valid-emails.json
+
+cgvt_site/assets/vendor/semantic.js
+cgvt_site/assets/vendor/semantic.css
+cgvt_site/assets/CACHE/
